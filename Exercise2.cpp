@@ -31,7 +31,7 @@ void printSubscriptionNotification(unsigned int daysUntilExpiration)
 	case 3:
 	case 4:
 	case 5:
-		cout << "Your subscription expires in " << daysUntilExpiration << " days\n";
+		cout << "Your subscription expires in " << daysUntilExpiration << " days.\n";
 		cout << "Renew now and save 10%!\n";
 		break;
 	

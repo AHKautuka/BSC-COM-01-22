@@ -31,7 +31,7 @@ void printSubscriptionNotification(unsigned int daysUntilExpiration)
 	}
 	else if (daysUntilExpiration <= 5)
 	{
-		cout << "Your subscription expires in " << daysUntilExpiration << " days\n";
+		cout << "Your subscription expires in " << daysUntilExpiration << " days.\n";
 		cout << "Renew now and save 10%!\n";
 	}
 	else
