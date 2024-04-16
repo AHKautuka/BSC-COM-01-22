@@ -1,11 +1,13 @@
 #include <iostream>
 #include <cstdlib>
+#include <time.h>
 using namespace std;
 
 void printSubscriptionNotification(unsigned int daysUntilExpiration);
 
 int main()
 {
+	srand(time(0));
 	unsigned int daysUntilExpiration = rand() % 12;
 	
 	printSubscriptionNotification(daysUntilExpiration);
