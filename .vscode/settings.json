@@ -2,7 +2,8 @@
 	"files.associations": {
 		"*.xml": "html",
 		"iostream": "cpp",
-		"optional": "cpp"
+		"optional": "cpp",
+		"*.tcc": "cpp"
 	},
 	"cmake.configureOnOpen": false
 }
