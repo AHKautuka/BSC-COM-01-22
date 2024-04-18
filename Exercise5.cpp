@@ -2,6 +2,8 @@
 #include <vector>
 #include <string>
 
+#include "Exercise5_Shapes.hpp"
+
 using namespace std;
 
 void shapePrompt(const vector<string>& shapes);
