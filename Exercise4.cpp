@@ -31,7 +31,7 @@ int main()
 		
 		if (isInRange(number, min, max))
 		{
-			cout << "Your input value(" << number << ") has been accepted.";
+			cout << "Your input value(" << number << ") has been accepted.\n";
 			running = false;
 		}
 		else
