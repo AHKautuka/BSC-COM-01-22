@@ -21,7 +21,7 @@ void shapePrompt(vector<string> shapes)
 	{
 		cout << (i + 1) << ". " << shapes[i] << "\n";
 	}
-	cout << shapes.size() << ". Quit Program\n";
+	cout << (shapes.size() + 1) << ". Quit Program\n";
 	
 	cout << endl;
 	cout << "Enter selection\n";
