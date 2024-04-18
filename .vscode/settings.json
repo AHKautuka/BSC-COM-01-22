@@ -1,7 +1,8 @@
 {
 	"files.associations": {
 		"*.xml": "html",
-		"iostream": "cpp"
+		"iostream": "cpp",
+		"optional": "cpp"
 	},
 	"cmake.configureOnOpen": false
 }
