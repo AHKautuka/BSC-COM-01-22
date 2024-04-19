@@ -1,34 +1,37 @@
 #pragma once
 #include "Shape.hpp"
 
-class Square : Shape
+class Square : public Shape
 {
 private:
-	float side_length;
+	float sideLength;
 public:
-	Square(float side_length);
+	Square();
 	
+	virtual void setSize(const vector<float>& size);
 	virtual float getArea();
 };
 
-class Rectangle : Shape
+class Rectangle : public Shape
 {
 private:
 	float width;
 	float height;
 public:
-	Rectangle(float width, float height);
+	Rectangle();
 	
+	virtual void setSize(const vector<float>& size);
 	virtual float getArea();
 };
 
-class Triangle : Shape
+class Triangle : public Shape
 {
 private:
-	float base_length;
+	float baseLength;
 	float height;
 public:
-	Triangle(float base_length, float height);
+	Triangle();
 	
+	virtual void setSize(const vector<float>& size);
 	virtual float getArea();
 };

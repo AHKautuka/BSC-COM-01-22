@@ -1,19 +1,33 @@
 #include "Exercise5_Shapes.hpp"
 
-Square::Square(float side_length) : Shape("Square")
+Square::Square() : Shape("Square")
+{}
+
+void Square::setSize(const vector<float>& size)
 {
-	this->side_length = side_length;
+	if(size.size() != 1)
+	{
+		throw exception();
+	}
+	sideLength = size[0];
 }
 
 float Square::getArea()
 {
-	return side_length * side_length;
+	return sideLength * sideLength;
 }
 
-Rectangle::Rectangle(float width, float height) : Shape("Rectangle")
+Rectangle::Rectangle() : Shape("Rectangle")
+{}
+
+void Rectangle::setSize(const vector<float>& size)
 {
-	this->width = width;
-	this->height = height;
+	if(size.size() != 2)
+	{
+		throw exception();
+	}
+	width = size[0];
+	height = size[1];
 }
 
 float Rectangle::getArea()
@@ -21,13 +35,20 @@ float Rectangle::getArea()
 	return width * height;
 }
 
-Triangle::Triangle(float base_length, float height) : Shape("Triangle")
+Triangle::Triangle() : Shape("Triangle")
+{}
+
+void Triangle::setSize(const vector<float>& size)
 {
-	this->base_length = base_length;
-	this->height = height;
+	if(size.size() != 2)
+	{
+		throw exception();
+	}
+	baseLength = size[0];
+	height = size[1];
 }
 
 float Triangle::getArea()
 {
-	return base_length * height * 0.5f;
+	return baseLength * height * 0.5f;
 }
