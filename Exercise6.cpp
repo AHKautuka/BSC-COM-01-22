@@ -34,6 +34,8 @@ string readFile(const string& path)
 	if (textFile.is_open())
 	{
 		string currentLine;
+		/* Note that this implementation means that the fileData string
+		will always end with a new line character*/
 		while (getline(textFile, currentLine))
 		{
 			fileData.append(currentLine).append("\n");
