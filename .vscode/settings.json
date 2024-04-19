@@ -3,7 +3,8 @@
 		"*.xml": "html",
 		"iostream": "cpp",
 		"optional": "cpp",
-		"*.tcc": "cpp"
+		"*.tcc": "cpp",
+		"new": "cpp"
 	},
 	"cmake.configureOnOpen": false
 }
