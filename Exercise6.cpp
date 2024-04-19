@@ -10,7 +10,8 @@ int main()
 {
 	string fileData = readFile("res/Exercise6_Info.txt");
 	
-	cout << fileData;
+	cout << "There are " << countVowels(fileData) << " vowels.\n";
+	
 	cout << endl;
 	
 	return 0;
