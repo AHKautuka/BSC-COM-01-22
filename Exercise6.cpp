@@ -10,6 +10,7 @@ int countVowels(const string& text);
 bool isVowel(char character);
 int countWords(const string& text);
 vector<string> tokenize(const string& text);
+string Reverse(const string& text, const bool skipEndingNewline);
 
 int main()
 {
@@ -17,6 +18,8 @@ int main()
 	
 	cout << "There are " << countVowels(fileData) << " vowels.\n";
 	cout << "There are " << countWords(fileData) << " words.\n";
+	cout << "Reversed text:\n";
+	cout << Reverse(fileData, true) << "\n";
 	
 	cout << endl;
 	
@@ -89,4 +92,25 @@ vector<string> tokenize(const string& text)
 	istringstream textStream(text);
 	vector<string> tokens{istream_iterator<string>{textStream}, istream_iterator<string>{}};
 	return tokens;
+}
+
+string Reverse(const string& text, const bool skipEndingNewline)
+{
+	string reversedText = "";
+	
+	/* The last character tends to be a new line but if so this new line
+	need not be printed, if the user does not require it */
+	char lastChar = text[text.size() - 1];
+	if(!(skipEndingNewline && lastChar == '\n'))
+	{
+		reversedText.append(1, lastChar);
+	}
+	
+	// Skipped last char in text as it is already added (if necessary)
+	for (int i = text.size() - 2; i >= 0; i--)
+	{
+		reversedText.append(1, text[i]);
+	}
+	
+	return reversedText;
 }
