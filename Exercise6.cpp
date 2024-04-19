@@ -9,10 +9,12 @@ int main()
 	
 	if (textFile.is_open())
 	{
-		string currentLine;
-		while (getline(textFile, currentLine))
 		{
-			fileData.append(currentLine).append("\n");
+			string currentLine;
+			while (getline(textFile, currentLine))
+			{
+				fileData.append(currentLine).append("\n");
+			}
 		}
 		
 		textFile.close();
