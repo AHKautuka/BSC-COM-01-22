@@ -11,6 +11,7 @@ bool isVowel(char character);
 int countWords(const string& text);
 vector<string> tokenize(const string& text);
 string Reverse(const string& text, const bool skipEndingNewline);
+vector<string> capitalizeSecondLetters(const vector<string>& words);
 
 int main()
 {
@@ -20,6 +21,14 @@ int main()
 	cout << "There are " << countWords(fileData) << " words.\n";
 	cout << "Reversed text:\n";
 	cout << Reverse(fileData, true) << "\n";
+	
+	cout << "Text with the 2nd letter in each word capitalized:\n";
+	vector<string> words = capitalizeSecondLetters(tokenize(fileData));
+	for(string word : words)
+	{
+		cout << word << " ";
+	}
+	cout << "\n";
 	
 	cout << endl;
 	
@@ -115,4 +124,20 @@ string Reverse(const string& text, const bool skipEndingNewline)
 	}
 	
 	return reversedText;
+}
+
+vector<string> capitalizeSecondLetters(const vector<string>& words)
+{
+	vector<string> result;
+	
+	for(string word : words)
+	{
+		string newWord = word;
+		if(newWord.length() > 1){
+			newWord[1] = toupper(newWord[1]);
+		}
+		result.push_back(newWord);
+	}
+	
+	return result;
 }
