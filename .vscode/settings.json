@@ -4,7 +4,9 @@
 		"iostream": "cpp",
 		"optional": "cpp",
 		"*.tcc": "cpp",
-		"new": "cpp"
+		"new": "cpp",
+		"fstream": "cpp",
+		"iosfwd": "cpp"
 	},
 	"cmake.configureOnOpen": false
 }
