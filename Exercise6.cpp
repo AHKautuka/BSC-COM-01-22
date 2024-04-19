@@ -1,10 +1,11 @@
 #include <iostream>
 #include <fstream>
+#include <string>
 using namespace std;
 
 string readFile(const string& path);
 int countVowels(const string& text);
-bool isVowel(const char& character);
+bool isVowel(char character);
 
 int main()
 {
@@ -56,7 +57,8 @@ int countVowels(const string& text)
 	return vowelNum;
 }
 
-bool isVowel(const char& character)
+bool isVowel(char character)
 {
+	character = toupper(character);
 	return character == 'A' || character == 'E' || character == 'I' || character == 'O' || character == 'U';
 }
