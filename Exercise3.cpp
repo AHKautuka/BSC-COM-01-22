@@ -8,6 +8,7 @@ int main()
 	
 	for (int i = 0; i < arrayLength; i++)
 	{
+		// If the first character of an elements is 'B', print the element
 		if (array[i].front() == 'B')
 		{
 			cout << array[i] << "\n";
