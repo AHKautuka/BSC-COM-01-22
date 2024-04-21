@@ -3,6 +3,8 @@
 #include <time.h>
 using namespace std;
 
+/* Prints a notification relating to the state of the subscription
+given the number of days until the expiry date */
 void printSubscriptionNotification(unsigned int daysUntilExpiration);
 
 int main()

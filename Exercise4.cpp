@@ -2,6 +2,8 @@
 #include <string>
 using namespace std;
 
+/* Checks if the given value is between the min and max (inclusive).
+Returns true iff min <= value <= max */
 bool isInRange(const int value, const int min, const int max);
 
 int main()
