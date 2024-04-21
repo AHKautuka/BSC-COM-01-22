@@ -1,23 +1,45 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <cmath>
 
 using namespace std;
 
+/* Prints the prompt that requests which shape to select.
+Also includes the option to quit the program */
 void shapePrompt();
-void selectShape(bool& running);
-void printInvalidInput(const string& input);
-void printInvalidInput(const int& input);
-void printInvalidInput(const float& input);
-bool isInRange(const int value, const int min, const int max);
+
+/* Allows the user to select the option they wish to choose.
+The reference parameter running allows for the notification of the quit program to end any loops if needed*/
+void selectOption(bool& running);
+
+/* Prompts the user for a nen-negative demcimal-point number.
+Validates the input and, if invalid, re-prompts until a valid input is given
+Returns the non-negative decimal as a float*/
 float enterNonNegativeNumber();
+
+/* Checks if the given value is between the min and max (inclusive).
+Returns true iff min <= value <= max */
+bool isInRange(const int value, const int min, const int max);
+
+/* Prints error message informing user that the input they provided is invalid
+Takes the invalid input as a string*/
+void printInvalidInput(const string& input);
+
+/* Prints error message informing user that the input they provided is invalid
+Takes the invalid input as a int*/
+void printInvalidInput(const int& input);
+
+/* Prints error message informing user that the input they provided is invalid
+Takes the invalid input as a float*/
+void printInvalidInput(const float& input);
 
 int main()
 {
 	bool running = true;
 	while(running){
 		shapePrompt();
-		selectShape(running);
+		selectOption(running);
 	}
 	
 	return 0;
@@ -35,7 +57,7 @@ void shapePrompt()
 	cout << "\n";
 }
 
-void selectShape(bool& running){
+void selectOption(bool& running){
 	cout << "Enter selection\n";
 	string input;
 	getline(cin, input);
@@ -105,35 +127,11 @@ void selectShape(bool& running){
 	cout << "\n";
 }
 
-void printInvalidInput(const string& input)
-{
-	cerr << "Your input was: " << input << " which is an invalid input\n";
-	cout << "Please enter a valid input!!!\n";
-}
-
-void printInvalidInput(const int& input)
-{
-	cerr << "Your input was: " << input << " which is an invalid input\n";
-	cout << "Please enter a valid input!!!\n";
-}
-
-void printInvalidInput(const float& input)
-{
-	cerr << "Your input was: " << input << " which is an invalid input\n";
-	cout << "Please enter a valid input!!!\n";
-}
-
-bool isInRange(const int value, const int min, const int max)
-{
-	return value >= min && value <= max;
-}
-
 float enterNonNegativeNumber()
 {
 	float number = -1;
 	
-	// number != number checks for NaN
-	while(number < 0 || number != number){
+	while(number < 0 || isnan(number) || isinf(number)){
 		string line;
 		getline(cin, line);
 		cout << "\n";
@@ -154,4 +152,27 @@ float enterNonNegativeNumber()
 	}
 	
 	return number;
+}
+
+bool isInRange(const int value, const int min, const int max)
+{
+	return value >= min && value <= max;
+}
+
+void printInvalidInput(const string& input)
+{
+	cerr << "Your input was: " << input << " which is an invalid input\n";
+	cout << "Please enter a valid input!!!\n";
+}
+
+void printInvalidInput(const int& input)
+{
+	cerr << "Your input was: " << input << " which is an invalid input\n";
+	cout << "Please enter a valid input!!!\n";
+}
+
+void printInvalidInput(const float& input)
+{
+	cerr << "Your input was: " << input << " which is an invalid input\n";
+	cout << "Please enter a valid input!!!\n";
 }
