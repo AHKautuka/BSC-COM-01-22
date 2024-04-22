@@ -42,6 +42,12 @@ int main()
 		}
 	}
 	
+	double* array = new double[rows * columns];
+	
+	
+	
+	delete[] array;
+	
 	return 0;
 }
 
