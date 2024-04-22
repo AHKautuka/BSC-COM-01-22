@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+int inputInteger();
+
 int main()
 {
 	int* dynamicInteger = new int;
