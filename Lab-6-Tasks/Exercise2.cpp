@@ -51,10 +51,44 @@ int main()
 	{
 		for(int i = 0; i < rows; i++)
 		{
-			cout << "Enter decimal " << (i + 1) << " of row " << (j + 1) << ":\n";
+			cout << "Enter decimal entry " << (i + 1) << " of row " << (j + 1) << ":\n";
 			array[i * j * rows] = inputDecimalNumber();
 		}
 	}
+	cout << endl;
+	
+	cout << "2D Array:\n";
+	cout << "{";
+	
+	for(int j = 0; j < columns; j++)
+	{
+		if(j != 0)
+		{
+			cout << " ";
+		}
+		cout << "{";
+		
+		for(int i = 0; i < rows; i++)
+		{
+			cout << array[i * j * rows];
+			if(i < (rows - 1))
+			{
+				cout << ", ";
+			}
+		}
+		
+		cout << "}";
+		if(j < (columns - 1))
+		{
+			cout << ",\n";
+		}
+	}
+	
+	cout << "}\n";
+	
+	delete[] array;
+	
+	cout << endl;
 	
 	delete[] array;
 	
