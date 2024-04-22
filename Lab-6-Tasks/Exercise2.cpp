@@ -43,12 +43,22 @@ int main()
 			cerr << columns << " is not within 0 to 3 (inclusive). Try again!\n";
 		}
 	}
+	cout << endl;
 	
 	double* array = new double[rows * columns];
 	
-	
+	for(int j = 0; j < columns; j++)
+	{
+		for(int i = 0; i < rows; i++)
+		{
+			cout << "Enter decimal " << (i + 1) << " of row " << (j + 1) << ":\n";
+			array[i * j * rows] = inputDecimalNumber();
+		}
+	}
 	
 	delete[] array;
+	
+	cout << endl;
 	
 	return 0;
 }
