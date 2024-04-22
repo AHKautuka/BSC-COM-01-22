@@ -3,6 +3,8 @@ using namespace std;
 
 int inputInteger();
 
+double inputDecimalNumber();
+
 /* Checks if the given value is between the min and max (inclusive).
 Returns true iff min <= value <= max */
 bool isInRange(const int value, const int min, const int max);
@@ -65,6 +67,29 @@ int inputInteger()
 		catch (const exception& e)
 		{
 			cerr << "Cannot read \"" << line << "\" as an integer. Try again!\n";
+			continue;
+		}
+		
+		// only evaluates if stoi(line) is successful
+		success = true;
+	}while(!success);
+	
+	return result;
+}
+
+double inputDecimalNumber(){
+	double result;
+	bool success = false;
+	
+	do{
+		string line;
+		getline(cin, line);
+		try{
+			result = stod(line);
+		}
+		catch (const exception& e)
+		{
+			cerr << "Cannot read \"" << line << "\" as an decimal number. Try again!\n";
 			continue;
 		}
 		
