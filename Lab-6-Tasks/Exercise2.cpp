@@ -47,11 +47,11 @@ int main()
 	
 	double* array = new double[rows * columns];
 	
-	for(int j = 0; j < columns; j++)
+	for(int i = 0; i < rows; i++)
 	{
-		for(int i = 0; i < rows; i++)
+		for(int j = 0; j < columns; j++)
 		{
-			cout << "Enter decimal entry " << (i + 1) << " of row " << (j + 1) << ":\n";
+			cout << "Enter decimal entry " << (j + 1) << " of row " << (i + 1) << ":\n";
 			array[i + j * rows] = inputDecimalNumber();
 		}
 	}
@@ -60,25 +60,25 @@ int main()
 	cout << "2D Array:\n";
 	cout << "{";
 	
-	for(int j = 0; j < columns; j++)
+	for(int i = 0; i < rows; i++)
 	{
-		if(j != 0)
+		if(i != 0)
 		{
 			cout << " ";
 		}
 		cout << "{";
 		
-		for(int i = 0; i < rows; i++)
+		for(int j = 0; j < columns; j++)
 		{
 			cout << array[i + j * rows];
-			if(i < (rows - 1))
+			if(j < (columns - 1))
 			{
 				cout << ", ";
 			}
 		}
 		
 		cout << "}";
-		if(j < (columns - 1))
+		if(i < (rows - 1))
 		{
 			cout << ",\n";
 		}
