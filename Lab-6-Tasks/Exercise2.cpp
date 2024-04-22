@@ -52,7 +52,7 @@ int main()
 		for(int i = 0; i < rows; i++)
 		{
 			cout << "Enter decimal entry " << (i + 1) << " of row " << (j + 1) << ":\n";
-			array[i * j * rows] = inputDecimalNumber();
+			array[i + j * rows] = inputDecimalNumber();
 		}
 	}
 	cout << endl;
@@ -70,7 +70,7 @@ int main()
 		
 		for(int i = 0; i < rows; i++)
 		{
-			cout << array[i * j * rows];
+			cout << array[i + j * rows];
 			if(i < (rows - 1))
 			{
 				cout << ", ";
