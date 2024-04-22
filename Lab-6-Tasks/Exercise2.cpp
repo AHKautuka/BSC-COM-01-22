@@ -90,10 +90,6 @@ int main()
 	
 	cout << endl;
 	
-	delete[] array;
-	
-	cout << endl;
-	
 	return 0;
 }
 
