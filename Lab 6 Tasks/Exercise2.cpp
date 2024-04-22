@@ -9,6 +9,38 @@ bool isInRange(const int value, const int min, const int max);
 
 int main()
 {
+	cout << "You shall create a 2 dimensional array.\n";
+	cout << "Please enter the number of rows (0-3):\n";
+	int rows = -1;
+	
+	while(true)
+	{
+		rows = inputInteger();
+		if(isInRange(rows, 0, 3))
+		{
+			break;
+		}
+		else
+		{
+			cerr << rows << " is not within 0 to 3 (inclusive). Try again!\n";
+		}
+	}
+	
+	cout << "Please enter the number of columns (0-3):\n";
+	int columns = -1;
+	
+	while(true)
+	{
+		columns = inputInteger();
+		if(isInRange(columns, 0, 3))
+		{
+			break;
+		}
+		else
+		{
+			cerr << columns << " is not within 0 to 3 (inclusive). Try again!\n";
+		}
+	}
 	
 	return 0;
 }
