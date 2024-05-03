@@ -2,8 +2,8 @@
 
 Rectangle::Rectangle()
 {
-	length = 0;
-	width = 0;
+	mLength = 0;
+	mWidth = 0;
 }
 
 Rectangle::~Rectangle()

@@ -3,8 +3,8 @@
 class Rectangle
 {
 private:
-	float length;
-	float width;
+	float mLength;
+	float mWidth;
 public:
 	Rectangle();
 	~Rectangle();
