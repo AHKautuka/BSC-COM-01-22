@@ -30,3 +30,8 @@ void Rectangle::setWidth(float newWidth)
 {
 	mWidth = newWidth;
 }
+	
+float Rectangle::getArea() const
+{
+	return mLength * mWidth;
+}

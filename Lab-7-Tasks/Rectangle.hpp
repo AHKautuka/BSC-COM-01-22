@@ -14,4 +14,6 @@ public:
 	
 	float getWidth() const;
 	void setWidth(float newWidth);
+	
+	float getArea() const;
 };
