@@ -15,6 +15,8 @@ int main()
 	float width = enterNonNegativeNumber();
 	rectangle.setWidth(width);
 	
+	cout << "\nThe rectangle has an area of " << rectangle.getArea() << ".\n";
+	
 	cout << endl;
 	
 	return 0;
