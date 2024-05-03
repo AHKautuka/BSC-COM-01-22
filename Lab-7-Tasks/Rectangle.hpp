@@ -8,4 +8,10 @@ private:
 public:
 	Rectangle();
 	~Rectangle();
+	
+	float getLength() const;
+	void setLength(float newLength);
+	
+	float getWidth() const;
+	void setWidth(float newWidth);
 };
