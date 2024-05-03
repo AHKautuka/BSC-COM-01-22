@@ -5,7 +5,15 @@ using namespace std;
 
 int main()
 {
-	Rectangle rectangle();
+	Rectangle rectangle;
+	
+	cout << "Enter the length of the Rectangle (a nonnegative decimal number):\n";
+	float length = enterNonNegativeNumber();
+	rectangle.setLength(length);
+	
+	cout << "Enter the width of the Rectangle (a nonnegative decimal number):\n";
+	float width = enterNonNegativeNumber();
+	rectangle.setWidth(width);
 	
 	cout << endl;
 	
