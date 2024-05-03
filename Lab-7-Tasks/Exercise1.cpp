@@ -1,5 +1,4 @@
-#include <iostream>
-
+#include "UserInput.hpp"
 #include "Rectangle.hpp"
 
 using namespace std;
