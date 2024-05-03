@@ -32,7 +32,7 @@
                 "-g",
                 "${fileDirname}/**.cpp",
                 "-o",
-                "${workspaceFolder}\\${fileDirname}\\bin\\${fileBasenameNoExtension}.exe"
+                "${fileDirname}\\bin\\${fileBasenameNoExtension}.exe"
             ],
             "options": {
                 "cwd": "${fileDirname}"
