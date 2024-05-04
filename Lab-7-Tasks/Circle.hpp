@@ -9,5 +9,8 @@ namespace shapes
 	public:
 		Circle();
 		~Circle();
+		
+		float getRadius() const;
+		void setRadius(float newRadius);
 	};
 }
