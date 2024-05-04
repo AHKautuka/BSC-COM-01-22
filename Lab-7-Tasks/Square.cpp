@@ -3,7 +3,7 @@ using namespace shapes;
 
 Square::Square()
 {
-	
+	mSideLength = 0;
 }
 
 Square::~Square()

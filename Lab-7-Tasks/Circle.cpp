@@ -3,7 +3,7 @@ using namespace shapes;
 
 Circle::Circle()
 {
-	
+	mRadius = 0;
 }
 
 Circle::~Circle()

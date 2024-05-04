@@ -3,7 +3,8 @@ using namespace shapes;
 
 Triangle::Triangle()
 {
-	
+	mBaseLength = 0;
+	mHeight = 0;
 }
 
 Triangle::~Triangle()
