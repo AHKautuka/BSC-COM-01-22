@@ -8,6 +8,7 @@ namespace shapes
 		float mSideLength;
 	public:
 		Square();
+		Square(float sideLength);
 		~Square();
 		
 		float getSideLength() const;

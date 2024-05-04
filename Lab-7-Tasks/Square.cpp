@@ -6,6 +6,11 @@ Square::Square()
 	mSideLength = 0;
 }
 
+Square::Square(float sideLength)
+{
+	mSideLength = sideLength;
+}
+
 Square::~Square()
 {
 	
