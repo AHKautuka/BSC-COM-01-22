@@ -9,6 +9,7 @@ namespace shapes
 		float mHeight;
 	public:
 		Triangle();
+		Triangle(float baseLength, float height);
 		~Triangle();
 		
 		float getBaseLength() const;

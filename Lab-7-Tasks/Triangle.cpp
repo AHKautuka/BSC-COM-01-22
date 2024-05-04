@@ -7,6 +7,12 @@ Triangle::Triangle()
 	mHeight = 0;
 }
 
+Triangle::Triangle(float baseLength, float height)
+{
+	mBaseLength = baseLength;
+	mHeight = height;
+}
+
 Triangle::~Triangle()
 {
 	
