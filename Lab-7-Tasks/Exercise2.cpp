@@ -13,7 +13,7 @@ int main()
 	cout << "Enter the width of the first Rectangle (a nonnegative decimal number):\n";
 	rectangle1.setWidth(enterNonNegativeNumber());
 	
-	cout << "The first rectangle has an area of " << rectangle1.getArea() << ".\n";
+	cout << "The first rectangle has an area of " << rectangle1.getArea() << ".\n" << endl;
 	
 	cout << "Enter the length of the second Rectangle (a nonnegative decimal number):\n";
 	float length = enterNonNegativeNumber();
