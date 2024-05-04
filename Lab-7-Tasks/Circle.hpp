@@ -8,6 +8,7 @@ namespace shapes
 		float mRadius;
 	public:
 		Circle();
+		Circle(float radius);
 		~Circle();
 		
 		float getRadius() const;

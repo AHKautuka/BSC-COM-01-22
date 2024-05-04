@@ -6,6 +6,11 @@ Circle::Circle()
 	mRadius = 0;
 }
 
+Circle::Circle(float radius)
+{
+	mRadius = radius;
+}
+
 Circle::~Circle()
 {
 	
