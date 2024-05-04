@@ -9,5 +9,8 @@ namespace shapes
 	public:
 		Square();
 		~Square();
+		
+		float getSideLength() const;
+		void setSideLength(float newSideLength);
 	};
 }

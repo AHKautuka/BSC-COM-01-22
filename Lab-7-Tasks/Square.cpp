@@ -10,3 +10,13 @@ Square::~Square()
 {
 	
 }
+
+float Square::getSideLength() const
+{
+	return mSideLength;
+}
+
+void Square::setSideLength(float newSideLength)
+{
+	mSideLength = newSideLength;
+}
