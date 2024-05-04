@@ -10,5 +10,11 @@ namespace shapes
 	public:
 		Triangle();
 		~Triangle();
+		
+		float getBaseLength() const;
+		void setBaseLength(float newBaseLength);
+		
+		float getHeight() const;
+		void setHeight(float newHeight);
 	};
 }
