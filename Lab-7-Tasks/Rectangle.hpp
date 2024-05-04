@@ -7,6 +7,7 @@ private:
 	float mWidth;
 public:
 	Rectangle();
+	Rectangle(float length, float width);
 	~Rectangle();
 	
 	float getLength() const;

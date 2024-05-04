@@ -6,6 +6,12 @@ Rectangle::Rectangle()
 	mWidth = 0;
 }
 
+Rectangle::Rectangle(float length, float width)
+{
+	mLength = length;
+	mWidth = width;
+}
+
 Rectangle::~Rectangle()
 {
 	
