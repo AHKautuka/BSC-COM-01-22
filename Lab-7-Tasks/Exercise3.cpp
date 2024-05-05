@@ -55,6 +55,7 @@ void selectOption(bool& running){
 	{
 		case 4:
 		{
+			cout << "You have chosen to Quit\n";
 			running = false;
 			return;
 		}
