@@ -20,6 +20,8 @@ public:
 	bool operator != (const Person& otherPerson);
 	bool operator < (const Person& otherPerson);
 	bool operator > (const Person& otherPerson);
+	
+	operator int ();
 private:
 	float mWeight;
 	string mFirstName;

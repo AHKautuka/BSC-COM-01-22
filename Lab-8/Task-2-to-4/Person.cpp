@@ -63,3 +63,8 @@ bool Person::operator > (const Person& otherPerson)
 {
 	return this->mAge > otherPerson.mAge;
 }
+	
+Person::operator int ()
+{
+	return mAge;
+}
