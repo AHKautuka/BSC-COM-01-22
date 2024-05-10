@@ -22,6 +22,8 @@ public:
 	bool operator > (const Person& otherPerson);
 	
 	operator int ();
+	operator string ();
+	operator float ();
 private:
 	float mWeight;
 	string mFirstName;
