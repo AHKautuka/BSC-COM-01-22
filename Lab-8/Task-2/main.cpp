@@ -21,5 +21,15 @@ int main () {
 		cout << "This is NOT the same person" << endl;
 	}
 	
+	if (Jane < John)
+	{
+		cout << "Jane is younger than John" << endl;
+	}
+	
+	if (John > Jane)
+	{
+		cout << "John is older than Jane" << endl;
+	}
+	
 	return 0;
 }
