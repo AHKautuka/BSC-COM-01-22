@@ -53,3 +53,13 @@ bool Person::operator != (const Person& otherPerson)
 {
 	return !(this->operator==(otherPerson));
 }
+
+bool Person::operator < (const Person& otherPerson)
+{
+	return this->mAge < otherPerson.mAge;
+}
+
+bool Person::operator > (const Person& otherPerson)
+{
+	return this->mAge > otherPerson.mAge;
+}
