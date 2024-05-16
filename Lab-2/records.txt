@@ -1,0 +1,2 @@
+Reg	test1	test2	test3
+d20	23.3	22.0	17.0
